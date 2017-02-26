@@ -1,5 +1,14 @@
 class CategorySerializer < ActiveModel::Serializer
-  attributes :id, :name, :children
+  attributes :bilevel_partition
+
+  def bilevel_partition
+    { name: "flare",
+      children: [
+        name,
+        children
+      ]
+    }
+  end
 
   def name
     object.large
