@@ -1,9 +1,13 @@
 class CategorySerializer < ActiveModel::Serializer
-  attributes :id, :large, :children
+  attributes :id, :name, :children
+
+  def name
+    object.large
+  end
 
   def children
     [
-      { middle: object.middle },
+      { name: object.middle },
       grandchildren
     ]
   end
