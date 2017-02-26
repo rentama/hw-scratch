@@ -14,7 +14,10 @@ class CategorySerializer < ActiveModel::Serializer
 
   def grandchildren
     { children: 
-      object.products.order(favorite_count: :desc).limit(10).select('id', 'favorite_count')
+      object.products
+      .order(favorite_count: :desc)
+      .limit(10)
+      .select('id', 'favorite_count')
     }
   end
 end
