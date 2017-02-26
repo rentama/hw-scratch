@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+ circle,
+ path {
+   cursor: pointer;
+ }
+
+ circle {
+   fill: none;
+   pointer-events: all;
+ }
+
+ #tooltip {
+   background: #fff;
+   padding: 3px 5px;
+   border: solid 1px #fff;
+   text-align: center;
+ }
+
+.gift {
+  height: 800px;
+}
