@@ -35,10 +35,8 @@ ActiveRecord::Schema.define(version: 20170225184638) do
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "gender"
-    t.string   "age"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "gender"
+    t.string "age"
   end
 
   add_foreign_key "purchase_logs", "products"
