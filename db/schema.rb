@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170225184638) do
+ActiveRecord::Schema.define(version: 20170226012211) do
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "middle_category_name"
-    t.string "large_category_name"
-    t.index ["large_category_name"], name: "index_categories_on_large_category_name", using: :btree
-    t.index ["middle_category_name"], name: "index_categories_on_middle_category_name", using: :btree
+    t.string "middle"
+    t.string "large"
+    t.index ["large"], name: "index_categories_on_large", using: :btree
+    t.index ["middle"], name: "index_categories_on_middle", using: :btree
   end
 
   create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
